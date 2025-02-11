@@ -1,4 +1,4 @@
-package com.example.crud.crudoperation.Controller;
+package com.example.crud.crudoperation.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
