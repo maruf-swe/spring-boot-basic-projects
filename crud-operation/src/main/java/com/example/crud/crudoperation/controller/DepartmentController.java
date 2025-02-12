@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DepartmentController {
-    
+
     @Autowired
     private DepartmentService departmentService;
 
     @PostMapping
     public Department saveDepartment(@RequestBody Department department) {
-
+        return departmentService.saveDepartment(department);
     }
 
 }
