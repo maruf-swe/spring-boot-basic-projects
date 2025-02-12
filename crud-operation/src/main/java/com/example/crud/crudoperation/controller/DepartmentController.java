@@ -3,10 +3,7 @@ package com.example.crud.crudoperation.controller;
 import com.example.crud.crudoperation.Service.DepartmentService;
 import com.example.crud.crudoperation.entity.Department;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +21,11 @@ public class DepartmentController {
     @GetMapping("/departments")
     public List<Department> getAllDepartments() {
         return departmentService.getAllDepartments();
+    }
+
+    @GetMapping("/departments/{id}")
+    public Department getDepartment(@PathVariable("id") Long departmentId) {
+        return departmentService.getDepartment(departmentId);
     }
 
 }

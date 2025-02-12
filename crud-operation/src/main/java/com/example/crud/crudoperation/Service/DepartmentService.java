@@ -5,7 +5,9 @@ import com.example.crud.crudoperation.entity.Department;
 import java.util.List;
 
 public interface DepartmentService {
-    Department saveDepartment(Department department);
+    public Department saveDepartment(Department department);
 
-    List<Department> getAllDepartments();
+    public List<Department> getAllDepartments();
+
+    public Department getDepartment(Long departmentId);
 }
