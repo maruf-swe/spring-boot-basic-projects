@@ -1,7 +1,7 @@
 package com.example.crud.crudoperation.repository;
 
-import org.springframework.stereotype.Repository;
+import com.example.crud.crudoperation.entity.Department;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-@Repository
-public class DepartmentRepository extends {
+public interface DepartmentRepository extends JpaRepository<Department,Long> {
 }
