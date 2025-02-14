@@ -39,4 +39,5 @@ public class DepartmentController {
         return departmentService.updateDepartment(departmentId, department);
     }
 
+
 }
