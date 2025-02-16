@@ -6,6 +6,7 @@ public class Department {
     private String departmentAddress;
     private String departmentCode;
 
+// this is without lombok..if we use lombok then those are don't use
     public Department(Long departmentId, String departmentName, String departmentAddress, String departmentCode) {
         this.departmentId = departmentId;
         this.departmentName = departmentName;
