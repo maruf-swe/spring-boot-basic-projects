@@ -38,7 +38,7 @@ public class DepartmentServiceImp implements DepartmentService {
         Department debData = departmentRepository.findById(departmentId).get();
 
         if (Objects.nonNull(department.getDepartmentName()) &&
-                !"".equalsIgnoreCase((department.getDepartmentName())) {
+                !"".equalsIgnoreCase(department.getDepartmentName())) {
             debData.setDepartmentName(department.getDepartmentName());
         }
         if (Objects.nonNull(department.getDepartmentName()) &&
@@ -47,11 +47,11 @@ public class DepartmentServiceImp implements DepartmentService {
         }
 
         if(Objects.nonNull(department.getDepartmentCode()) &&
-        !"".equalsIgnoreCase((department.getDepartmentCode()) {
+        !"".equalsIgnoreCase(department.getDepartmentCode())) {
             debData.setDepartmentCode(department.getDepartmentCode());
         }
         if(Objects.nonNull(department.getDepartmentId()) &&
-        !"".equalsIgnoreCase((department.getDepartmentId()) {
+        !"".equalsIgnoreCase(department.getDepartmentId())) {
             debData.getDepartmentId(department.getDepartmentId());
         }
 
