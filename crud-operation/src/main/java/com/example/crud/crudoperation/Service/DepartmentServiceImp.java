@@ -58,6 +58,7 @@ public class DepartmentServiceImp implements DepartmentService {
     @Override
     public Department getDepartmentByName(String departmentName) {
         return departmentRepository.findByDepartmentName(departmentName);
+        //return departmentRepository.findByDepartmentNameIgnoreCase(departmentName);  this for case sensitive
     }
 
 }
