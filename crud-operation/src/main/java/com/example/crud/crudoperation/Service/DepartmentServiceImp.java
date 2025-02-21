@@ -41,24 +41,18 @@ public class DepartmentServiceImp implements DepartmentService {
                 !"".equalsIgnoreCase(department.getDepartmentName())) {
             debData.setDepartmentName(department.getDepartmentName());
         }
-        if (Objects.nonNull(department.getDepartmentName()) &&
-                !"".equalsIgnoreCase(department.getDepartmentName())) {
-            debData.setDepartmentName(department.getDepartmentName());
-        }
 
-        if(Objects.nonNull(department.getDepartmentCode()) &&
-        !"".equalsIgnoreCase(department.getDepartmentCode())) {
+        if (Objects.nonNull(department.getDepartmentCode()) &&
+                !"".equalsIgnoreCase(department.getDepartmentCode())) {
             debData.setDepartmentCode(department.getDepartmentCode());
         }
-        if(Objects.nonNull(department.getDepartmentId()) &&
-        !"".equalsIgnoreCase(department.getDepartmentId())) {
-            debData.getDepartmentId(department.getDepartmentId());
+
+        if (Objects.nonNull(department.getDepartmentAddress()) &&
+                !"".equalsIgnoreCase(department.getDepartmentAddress())) {
+            debData.setDepartmentAddress(department.getDepartmentAddress());
         }
 
-        if(Objects.nonNull(department.getDepartmentAddress()) &&
-        !"".equalsIgnoreCase((department.getDepartmentAddress()) {
-            debData.getDepartmentAddress(department.getDepartmentAddress());
-        }
+        return departmentRepository.save(department);
     }
 
 }
