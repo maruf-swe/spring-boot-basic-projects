@@ -14,7 +14,7 @@ public class DepartmentController {
 
     @Autowired
     private DepartmentService departmentService;
-    private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
+    private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class); // this is tell where is execute
     @PostMapping("/departments")
     public Department saveDepartment(@RequestBody Department department) {
         return departmentService.saveDepartment(department);
