@@ -2,6 +2,7 @@ package com.example.crud.crudoperation.controller;
 
 import com.example.crud.crudoperation.Service.DepartmentService;
 import com.example.crud.crudoperation.entity.Department;
+import com.example.crud.crudoperation.error.DepartmentNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public Department getDepartmentById(@PathVariable("id") Long departmentId) {
+    public Department getDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
         return departmentService.getDepartmentById(departmentId);
     }
 

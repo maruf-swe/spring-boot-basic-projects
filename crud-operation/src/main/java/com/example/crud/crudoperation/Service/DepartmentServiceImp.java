@@ -1,12 +1,14 @@
 package com.example.crud.crudoperation.Service;
 
 import com.example.crud.crudoperation.entity.Department;
+import com.example.crud.crudoperation.error.DepartmentNotFoundException;
 import com.example.crud.crudoperation.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class DepartmentServiceImp implements DepartmentService {
@@ -24,8 +26,11 @@ public class DepartmentServiceImp implements DepartmentService {
     }
 
     @Override
-    public Department getDepartmentById(Long departmentId) {
-        return departmentRepository.findById(departmentId).get();
+    public Department getDepartmentById(Long departmentId) throws DepartmentNotFoundException {
+        Optional<Department> department = departmentRepository.findById(departmentId);
+        if (!department.isPresent()) {
+            throw new DepartmentNotFoundException("Department is not available");
+        }
     }
 
     @Override

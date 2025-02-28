@@ -1,6 +1,7 @@
 package com.example.crud.crudoperation.Service;
 
 import com.example.crud.crudoperation.entity.Department;
+import com.example.crud.crudoperation.error.DepartmentNotFoundException;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ public interface DepartmentService {
 
     public List<Department> getAllDepartments();
 
-    public Department getDepartmentById(Long departmentId);
+    public Department getDepartmentById(Long departmentId) throws DepartmentNotFoundException;
 
     public void deleteDepartment(Long departmentId);
 
